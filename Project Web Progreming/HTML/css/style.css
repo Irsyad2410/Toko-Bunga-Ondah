@@ -1,0 +1,459 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-detail {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cart {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart th, .cart td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-detail, .cart {
+        width: 90%;
+    }
+}
+.checkout, .contact, .success {
+    width: 50%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.checkout form, .contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout label, .contact label {
+    margin-top: 10px;
+}
+
+.checkout input, .checkout textarea, .checkout select,
+.contact input, .contact textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .checkout, .contact, .success {
+        width: 90%;
+    }
+}
+
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: rgba(7, 7, 7, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #ff6f61;
+    color: white;
+}
+
+/* Sections */
+.checkout, .contact, .success {
+    width: 50%;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #ff0000;
+}
+
+/* Forms */
+.checkout form, .contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout label, .contact label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.checkout input, .checkout textarea, .checkout select,
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.checkout input:focus, .checkout textarea:focus, .checkout select:focus,
+.contact input:focus, .contact textarea:focus {
+    border-color: #ff3b2f;
+    box-shadow: 0px 0px 8px rgba(255, 111, 97, 0.5);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px;
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff3b2f;
+}
+
+/* Success Page */
+.success h2 {
+    color: #28a745;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .checkout, .contact, .success {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+}
+
+header {
+    background-image: url('header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Styling umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header styling */
+header {
+    background-color: #ff66b2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk section success */
+.success {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.success p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Styling untuk detail pesanan */
+.success .order-details,
+.success .tracking-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.success h3 {
+    font-size: 1.5rem;
+    color: #ff66b2;
+    margin-bottom: 10px;
+}
+
+.success .order-details p,
+.success .tracking-info p {
+    font-size: 1rem;
+    color: #333;
+    margin: 8px 0;
+}
+
+/* Styling untuk customer service */
+.customer-service {
+    background-color: #fff0f6;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-service h3 {
+    font-size: 1.5rem;
+    color: #ff66b2;
+    margin-bottom: 10px;
+}
+
+.customer-service p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.customer-service ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.customer-service ul li {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+}
+
+.customer-service a {
+    color: #ff66b2;
+    text-decoration: none;
+}
+
+.customer-service a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Kembali ke Beranda */
+.success .btn {
+    display: inline-block;
+    background-color: #ff66b2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.success .btn:hover {
+    background-color: #e55b98;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 0.7rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styling untuk mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .success {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .success h2 {
+        font-size: 1.5rem;
+    }
+
+    .success .order-details,
+    .success .tracking-info {
+        padding: 12px;
+    }
+
+    .success .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .customer-service {
+        padding: 15px;
+    }
+
+    .customer-service h3 {
+        font-size: 1.3rem;
+    }
+
+    .customer-service ul li {
+        font-size: 0.9rem;
+    }
+}

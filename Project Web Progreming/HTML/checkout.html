@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">🛒 Keranjang</a>
+      </nav>
+    </header>
+
+    <section class="checkout">
+      <h2>Detail Pembeli</h2>
+      <form action="success.html">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" required />
+
+        <label for="address">Alamat:</label>
+        <textarea id="address" required></textarea>
+
+        <label for="payment">Metode Pembayaran:</label>
+        <select id="payment" onchange="showPaymentDetails()">
+          <option value="transfer">Transfer Bank</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+
+        <!-- Informasi untuk pembayaran transfer bank -->
+        <div id="bank-details" style="display: none">
+          <h3>Instruksi Pembayaran</h3>
+          <p>
+            Untuk pembayaran menggunakan transfer bank, silakan lakukan transfer
+            ke rekening berikut:
+          </p>
+          <ul>
+            <li><strong>Bank:</strong> Bank XYZ</li>
+            <li><strong>No. Rekening:</strong> 123-456-789</li>
+            <li><strong>Atas Nama:</strong> Toko Bunga Mawar</li>
+          </ul>
+          <p>
+            Setelah melakukan pembayaran, silakan kirimkan bukti transfer ke
+            email kami di <strong>info@tokobungamawar.com</strong>.
+          </p>
+        </div>
+
+        <button type="submit" class="btn">Konfirmasi Pesanan</button>
+      </form>
+    </section>
+
+    <script>
+      // Fungsi untuk menampilkan instruksi pembayaran jika metode yang dipilih adalah transfer bank
+      function showPaymentDetails() {
+        const paymentMethod = document.getElementById("payment").value;
+        const bankDetails = document.getElementById("bank-details");
+
+        if (paymentMethod === "transfer") {
+          bankDetails.style.display = "block";
+        } else {
+          bankDetails.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
